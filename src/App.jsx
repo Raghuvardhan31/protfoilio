@@ -1,24 +1,22 @@
-import React from 'react'
-import './App.css'
-import {Routes, Route} from 'react-router-dom'
-import Home from './pages/Home'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import Navigation from './components/navigation'
+import { Routes, Route } from "react-router-dom";
+import Navigation from "./components/Navigation";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+
 function App() {
   return (
-    <div>
-      <>
-          <Navigation>
-            <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/contact" element={<Contact />} />
-              </Routes>
-          </Navigation>
-      </>
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<Navigation />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="projects" element={<Projects />} />
+        <Route path="contact" element={<Contact />} />
+      </Route>
+    </Routes>
+  );
 }
 
-export default App
+export default App;

@@ -28,10 +28,6 @@ const Navigation = () => {
               <Info size={18} /> About Us
             </NavLink>
 
-            <NavLink to="/services" className="nav-item">
-              <Briefcase size={18} /> Services
-            </NavLink>
-
             <NavLink to="/projects" className="nav-item">
               <FolderGit2 size={18} /> Projects
             </NavLink>
@@ -60,10 +56,6 @@ const Navigation = () => {
           <span>About</span>
         </NavLink>
 
-        <NavLink to="/services" className="bottom-nav-item">
-          <Briefcase size={20} />
-          <span>Services</span>
-        </NavLink>
 
         <NavLink to="/projects" className="bottom-nav-item">
           <FolderGit2 size={20} />
