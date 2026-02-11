@@ -1,0 +1,114 @@
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+/* ===== TOP NAV ===== */
+.top-nav {
+  height: 56px;
+  background: #fff ;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.top-nav-container {
+  max-width: 1200px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.logo-text {
+  margin-left: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(23, 23, 23);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 35px;  /* Matches your original font-size */
+  width: auto;
+  font-weight: 700;  /* Not needed for img, but harmless */
+}
+
+.top-nav-links {
+  display: none;
+  gap: 20px;
+}
+
+.nav-item {
+  color: #e7e9ee;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.nav-item.active {
+  color: #0f0f10;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+  padding-top: 56px;
+  padding-bottom: 64px;
+}
+
+/* ===== BOTTOM NAV ===== */
+.bottom-nav {
+  height: 55px;
+  background: #020617;
+  border-top: 1px solid #1e293b;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+}
+
+.bottom-nav-item {
+  color: #9ca3af;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 11px;
+}
+
+.bottom-nav-item.active {
+  color: #fff ;
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 768px) {
+
+  .top-nav-links {
+    display: flex;
+  }
+
+  .bottom-nav {
+    display: none;
+  }
+
+  .main-content {
+    padding-bottom: 0;
+  }
+}
