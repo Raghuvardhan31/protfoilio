@@ -1,0 +1,145 @@
+/* ===== MAIN SECTION ===== */
+.main {
+  background: linear-gradient(135deg, #000000, #0f0f0f);
+  color: #f1f1f1;
+  min-height: 100vh;
+  padding: 80px 10%;
+  font-family: 'Poppins', sans-serif;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* ===== HEADINGS ===== */
+.main h1 {
+  font-size: 42px;
+  color: #00f5d4;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.main h1::after {
+  content: "";
+  width: 60%;
+  height: 3px;
+  background: #00f5d4;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+}
+
+.main p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #cccccc;
+  max-width: 900px;
+  margin-bottom: 60px;
+}
+
+/* ===== EDUCATION SECTION ===== */
+.education-section {
+  margin-top: 40px;
+}
+
+.education-section h2 {
+  font-size: 32px;
+  color: #00f5d4;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.education-section h2::after {
+  content: "";
+  width: 50%;
+  height: 3px;
+  background: #00f5d4;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+}
+
+/* ===== EDUCATION CARD ===== */
+.edu-item {
+  display: flex;
+  align-items: center;
+  background: #111111;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 10px rgba(0, 245, 212, 0.1);
+  animation: slideUp 0.8s ease forwards;
+}
+
+.edu-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(0, 245, 212, 0.4);
+}
+
+/* ===== IMAGE ===== */
+.edu-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+/* ===== TEXT ===== */
+.edu-item p {
+  font-size: 17px;
+  color: #f1f1f1;
+}
+
+.edu-item span {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #00f5d4;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .main {
+    padding: 60px 6%;
+  }
+
+  .main h1 {
+    font-size: 32px;
+  }
+
+  .education-section h2 {
+    font-size: 26px;
+  }
+
+  .edu-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .edu-item img {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+
+  .main p {
+    font-size: 16px;
+  }
+}

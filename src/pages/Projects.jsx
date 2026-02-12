@@ -1,92 +1,162 @@
-import React from 'react';
-import './Projects.css';
+import React from "react";
+import "./Projects.css";
 
-export default function Projects() {
-  const projects = [
-    {
-      title: 'ChessWave Online',
-      description: 'A comprehensive online chess platform with real-time multiplayer gaming, tournament management, and advanced analytics for players of all skill levels.',
-      features: ['Real-time Multiplayer', 'Tournament System', 'Player Analytics', 'AI Opponent'],
-      link: 'https://chesswave.com',
-      linkText: 'Visit Live Site',
-      icon: '♟️'
-    },
-    {
-      title: 'E-Commerce Platform',
-      description: 'Full-featured e-commerce solution with product management, payment integration, inventory tracking, and customer analytics dashboard.',
-      features: ['Payment Integration', 'Inventory Management', 'Analytics', 'Mobile Responsive'],
-      link: '#',
-      linkText: 'View Project',
-      icon: '🛒'
-    },
-    {
-      title: 'Business Dashboard',
-      description: 'Custom business intelligence dashboard with real-time data visualization, reporting tools, and performance metrics for data-driven decision making.',
-      features: ['Real-time Data', 'Custom Reports', 'Data Visualization', 'Export Tools'],
-      link: '#',
-      linkText: 'Explore Dashboard',
-      icon: '📊'
-    }
-  ];
-
+function Projects() {
   return (
-    <div className="projects-container">
-      {/* Header */}
-      <div className="projects-header">
-        <h1>Our Projects</h1>
-        <p>Showcasing successful projects built with cutting-edge technology and innovative solutions.</p>
-      </div>
+    <div className="projects-section">
+      <h1>My Projects</h1>
 
-      {/* Projects Grid */}
-      {projects.length > 0 ? (
-        <div className="projects-grid">
-          {projects.map((project, index) => (
-            <div key={index} className="project-card">
-              <div className="project-image">
-                {project.icon}
-              </div>
+      <div className="projects-container">
 
-              <div className="project-content">
-                <h3 className="project-title">{project.title}</h3>
-                <p className="project-description">{project.description}</p>
+        {/* ChessConnect */}
+        <div className="project-card">
+          <h2>ChessConnect</h2>
+          <p>
+            A social media platform for the chess community where users can
+            view courses, solve puzzles, upload posts, and track performance.
+          </p>
 
-                <div className="project-features">
-                  <h4>Key Features:</h4>
-                  <div className="features-list">
-                    {project.features.map((feature, idx) => (
-                      <span key={idx} className={`feature-tag ${idx === 0 ? 'primary' : ''}`}>
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+          <div className="tech-stack">
+            <span>React</span>
+            <span>Django</span>
+            <span>REST API</span>
+            <span>Authentication</span>
+          </div>
 
-                <a href={project.link} className="project-link" target="_blank" rel="noopener noreferrer">
-                  {project.linkText} →
-                </a>
-              </div>
-            </div>
-          ))}
+          <div className="project-links">
+            <a
+              href="https://chesswave.online"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="live-btn"
+            >
+              Live Demo
+            </a>
+          </div>
         </div>
-      ) : (
-        <div className="no-projects">
-          <h3>Projects Coming Soon</h3>
-          <p>We're working on some exciting projects. Stay tuned!</p>
-        </div>
-      )}
 
-      {/* Coming Soon Section */}
-      <div className="coming-soon">
-        <h2>📈 More Institutional Projects Coming Soon</h2>
-        <p>
-          We're constantly growing and adding new projects to our portfolio. 
-          This is completely normal for growing companies as we expand our capabilities 
-          and take on larger institutional clients.
-        </p>
-        <div className="trust-message">
-          ✨ <span className="growth-indicator">Growing & Expanding</span> - Stay tuned for exciting updates!
+        {/* Rama Raju Chess Academy */}
+        <div className="project-card">
+          <h2>Rama Raju Chess Academy Website</h2>
+          <p>
+            A responsive educational website developed for Rama Raju Chess Academy
+            showcasing courses, tournaments, coaching programs, and student achievements.
+          </p>
+
+          <div className="tech-stack">
+            <span>React</span>
+            <span>Responsive UI</span>
+            <span>Web Development</span>
+          </div>
+
+          <div className="project-links">
+            <a
+              href="https://github.com/Raghuvardhan31/rama-raju-chess"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="github-btn"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://ramarajuchessacademy.chesswave.online"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="live-btn"
+            >
+              Live Demo
+            </a>
+          </div>
         </div>
+
+        {/* IPO Web App */}
+        <div className="project-card">
+          <h2>IPO Web Application</h2>
+          <p>
+            A production-level IPO management platform built using React and Django.
+            Includes admin dashboard, REST APIs, company & IPO management,
+            document uploads, and AWS deployment.
+          </p>
+
+          <div className="tech-stack">
+            <span>React</span>
+            <span>Django</span>
+            <span>MySQL</span>
+            <span>AWS</span>
+          </div>
+
+          <div className="project-links">
+            <a
+              href="https://github.com/Raghuvardhan31/IPO-REST_API-team_bluestock-"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="github-btn"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        {/* Memora */}
+        <div className="project-card">
+          <h2>Memora – Smart Memory Assistant</h2>
+          <p>
+            An AI-powered personal assistant that answers queries using
+            LangChain, HuggingFace embeddings, FAISS, and FastAPI.
+            Designed for intelligent, context-aware responses.
+          </p>
+
+          <div className="tech-stack">
+            <span>Python</span>
+            <span>LangChain</span>
+            <span>FAISS</span>
+            <span>FastAPI</span>
+            <span>AI</span>
+          </div>
+
+          <div className="project-links">
+            <a
+              href="https://github.com/Raghuvardhan31/memora"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="github-btn"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        {/* Cosmetic Recommendation */}
+        <div className="project-card">
+          <h2>Cosmetic Recommendation System</h2>
+          <p>
+            AI-based system that suggests cosmetic products based on
+            skin condition analysis using Machine Learning classification models.
+          </p>
+
+          <div className="tech-stack">
+            <span>Python</span>
+            <span>Machine Learning</span>
+            <span>Flask</span>
+            <span>Data Analysis</span>
+          </div>
+
+          <div className="project-links">
+            <a
+              href="https://github.com/Raghuvardhan31/cosmetic-recommendation"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="github-btn"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   );
 }
+
+export default Projects;
