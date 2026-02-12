@@ -19,7 +19,7 @@ function Home() {
               I design clean, secure RESTful APIs and develop production-ready 
               backend systems with a strong focus on performance and architecture. 
               Passionate about cloud technologies, backend engineering, and AI-driven 
-              applications including LLMs and RAG pipelines.
+              applications including LLMs and RAG pipelines.Hii this is raghuvardahn
             </p>  
           </div>
 
