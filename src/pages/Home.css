@@ -2,7 +2,7 @@
 /* Full background section */
 .home {
   min-height: 100vh;   /* IMPORTANT: use min-height instead */
-  background: url('/background.jpg') no-repeat center center/cover;
+  background: linear-gradient(135deg, #000, #0f0f0f);
   display: flex;
   flex-direction: column;   /* allow vertical stacking */
 }
